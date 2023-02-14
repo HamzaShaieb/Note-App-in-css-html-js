@@ -14,14 +14,17 @@
     <!-- Start Main html page -->
     <h1>Note App </h1>
     <div class="container">
+      <!--Start inputes Section-->
           <div class="iputes">
-            <input type="text" placeholder="Title....">
-            <textarea name="" id="" cols="10" rows="10"></textarea>
+            <input type="text" placeholder="Title...." id="text-in" value="" >
+            <textarea name="f" id="text-area" cols="10" rows="10" spellcheck="true" oninput="gettext(e)"></textarea>
             <div class="buttons">
-              <input type="button" value="Add" >
-              <input type="reset" value="Delete">
+              <input type="button" value="Delete" >
+              <input type="reset" value="Add" onclick="Add_Note()">
             </div>
           </div>
+      <!--End inputes Section-->
+      <!--Start inputes Section-->
           <div class="notes_boxes">
             <div class="box">
               <p>Work For Money </p>
@@ -44,9 +47,41 @@
 
             </div>
           </div>
+      <!--Start inputes Section-->
 
     </div>
     <!-- End Main html page -->
+    <!--Start Script Section -->
+    <script>
+      var title = document.getElementById("text-in").value
+      var text_content = document.getElementById("text-area").value
+      let boxes = document.querySelector(".notes_boxes")
+       
+
+      function Add_Note(){
+        alert(title)
+        let boxes = document.querySelector(".notes_boxes")
+        let p_title = document.createElement("p")
+        p_title.value = title
+
+        let p_text = document.createElement("p")
+        let p_content_1 = document.createTextNode(text_content)
+        p_text.appendChild(p_content_1) 
+        
+        let div_box = document.createElement("div")
+        div_box.classList.add("box")
+        div_box.appendChild(p_title)
+        div_box.appendChild(p_text)
+        boxes.appendChild(div_box)
+        
+
+
+      }
+      
+
+    </script>
+
+    <!--Start Script Section -->
 
 </body>
 </html>
