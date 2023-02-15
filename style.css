@@ -12,7 +12,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-  overflow: hidden;
+  overflow: scroll;
   background-color: #0084B7;
   padding-top: 0;
 }
@@ -21,7 +21,6 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top:2rem;
@@ -32,22 +31,111 @@ h1 {
   text-align: center;
   padding: 3rem;
 }
+/* Start inputes */
 .container .iputes{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-size: 1rem;
 }
 .container .iputes input{
   padding: 10px;
-  font-size: 1rem;
-  width: 50%;
+  width: 30%;
 }
 .container .iputes textarea{
   padding: 10px;
-  font-size: 1rem;
-  width: 50%;
+  width: 30%;
+  height: 100px;
+  line-height: 25px;
 }
+/*End inputes */
+/*Start Buttones */
+.container .iputes .buttons {
+  padding: 5px;
+  font-size: 0.5rem;
+  width: 30%;
+  height: 20%;
+  display: flex;
+  justify-content: end;
+  margin-top: 0;
+  color: white;
+}
+.container .iputes .buttons input{
+  margin-right: 5px;
+  padding: 8px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+   
+
+}
+.container .iputes .buttons input:first-child{
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+
+}
+.container .iputes .buttons input:first-child:hover{
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+
+}
+.container .iputes .buttons input:nth-child(2){
+  box-shadow: 0px 0px 14px -7px #7df019;
+  background-image: linear-gradient(45deg, #32ff2f 0%, #7df019  51%, #2fffba  100%);
+
+}
+.container .iputes .buttons input:nth-child(2):hover{
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+/*End Buttones */
+/*Start note boxes */
+.container .notes_boxes {
+  width: 100%;
+  display: grid;
+  grid-template-columns:auto auto auto auto;
+  padding:30px;
+  column-gap: 30px;
+  row-gap: 30px;
+
+
+}
+.container .notes_boxes .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 30px;
+}
+.container .notes_boxes input{
+  padding: 10px;
+  width: 100%;
+ }
+ .container .notes_boxes textarea{
+  padding: 10px;
+  width: 100%;
+  min-height: 100%;
+ }
+ /*End note boxes */
+ /*End Main Container */
+
+ 
+
 
 
 
